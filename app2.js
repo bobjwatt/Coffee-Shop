@@ -225,6 +225,20 @@ for (var i = 0; i < seaTacAirport.beansPerHour.length; i++) {
 };
 beansTable.appendChild(trElement);
 
+//*****************************************************//
+
+var locationName = document.getElementById('Location');
+var minCustomersHour = document.getElementById('Min');
+var maxCustomersHour = document.getElementById('Max');
+var avgCupsPerCustomer = document.getElementById('Avg Cups');
+var avgPoundsPerCustomer = document.getElementById('Avg Pounds');
+var allSubmisions = [];
+
+// var renderAllComments = function() {
+//   locationName.innerHTML = '';
+//   for (var i = 0; i < allComments.length; i++) {
+//     locationName.appendChild(allComments[i].render());
+//   };
 //make a function that builds the header row
   //create a row element
 
