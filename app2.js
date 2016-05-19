@@ -141,136 +141,145 @@ for (var i = 0; i < hours.length; i++) {
   trElement.appendChild(thElement);
 };
 beansTable.appendChild(trElement);
+//Log way to do it
+// var trElement = document.createElement('tr');
+// var thElement = document.createElement('th');
+// thElement.textContent = 'Pike Place Market';
+// trElement.appendChild(thElement);
+//
+// var tdElement = document.createElement('td');
+// tdElement.textContent = pikePlace.totalBeans;
+// trElement.appendChild(tdElement);
+//
+// for (var i = 0; i < pikePlace.beansPerHour.length; i++) {
+//   var tdElement = document.createElement('td');
+//   tdElement.textContent = pikePlace.beansPerHour[i];
+//   trElement.appendChild(tdElement);
+// };
+// beansTable.appendChild(trElement);
+// //***********************************//
+// var trElement = document.createElement('tr');
+// var thElement = document.createElement('th');
+// thElement.textContent = 'Capitol Hill';
+// trElement.appendChild(thElement);
+//
+// var tdElement = document.createElement('td');
+// tdElement.textContent = capitolHill.totalBeans;
+// trElement.appendChild(tdElement);
+//
+// for (var i = 0; i < capitolHill.beansPerHour.length; i++) {
+//   var tdElement = document.createElement('td');
+//   tdElement.textContent = capitolHill.beansPerHour[i];
+//   trElement.appendChild(tdElement);
+// };
+// beansTable.appendChild(trElement);
+// //**************************************//
+// var trElement = document.createElement('tr');
+// var thElement = document.createElement('th');
+// thElement.textContent = 'Seattle Public Library';
+// trElement.appendChild(thElement);
+//
+// var tdElement = document.createElement('td');
+// tdElement.textContent = seattlePublicLibrary.totalBeans;
+// trElement.appendChild(tdElement);
+//
+// for (var i = 0; i < seattlePublicLibrary.beansPerHour.length; i++) {
+//   var tdElement = document.createElement('td');
+//   tdElement.textContent = seattlePublicLibrary.beansPerHour[i];
+//   trElement.appendChild(tdElement);
+// };
+// beansTable.appendChild(trElement);
+//
+// //**************************************//
+// var trElement = document.createElement('tr');
+// var thElement = document.createElement('th');
+// thElement.textContent = 'South Lake Union';
+// trElement.appendChild(thElement);
+//
+// var tdElement = document.createElement('td');
+// tdElement.textContent = southLakeUnion.totalBeans;
+// trElement.appendChild(tdElement);
+//
+// for (var i = 0; i < southLakeUnion.beansPerHour.length; i++) {
+//   var tdElement = document.createElement('td');
+//   tdElement.textContent = southLakeUnion.beansPerHour[i];
+//   trElement.appendChild(tdElement);
+// };
+// beansTable.appendChild(trElement);
+//
+// //***************************************//
+//
+// var trElement = document.createElement('tr');
+// var thElement = document.createElement('th');
+// thElement.textContent = 'Sea-Tac Airport';
+// trElement.appendChild(thElement);
+//
+// var tdElement = document.createElement('td');
+// tdElement.textContent = seaTacAirport.totalBeans;
+// trElement.appendChild(tdElement);
+//
+// for (var i = 0; i < seaTacAirport.beansPerHour.length; i++) {
+//   var tdElement = document.createElement('td');
+//   tdElement.textContent = seaTacAirport.beansPerHour[i];
+//   trElement.appendChild(tdElement);
+// };
+// beansTable.appendChild(trElement);
 
-var trElement = document.createElement('tr');
-var thElement = document.createElement('th');
-thElement.textContent = 'Pike Place Market';
-trElement.appendChild(thElement);
+//***********//
+//generalized version
+function makeTableRow(store) {
+  var trElement = document.createElement('tr');
+  var thElement = document.createElement('th');
+  thElement.textContent = store.locationName;
+  trElement.appendChild(thElement);
 
-var tdElement = document.createElement('td');
-tdElement.textContent = pikePlace.totalBeans;
-trElement.appendChild(tdElement);
-
-for (var i = 0; i < pikePlace.beansPerHour.length; i++) {
   var tdElement = document.createElement('td');
-  tdElement.textContent = pikePlace.beansPerHour[i];
+  tdElement.textContent = store.totalBeans;
   trElement.appendChild(tdElement);
-};
-beansTable.appendChild(trElement);
-//***********************************//
-var trElement = document.createElement('tr');
-var thElement = document.createElement('th');
-thElement.textContent = 'Capitol Hill';
-trElement.appendChild(thElement);
 
-var tdElement = document.createElement('td');
-tdElement.textContent = capitolHill.totalBeans;
-trElement.appendChild(tdElement);
-
-for (var i = 0; i < capitolHill.beansPerHour.length; i++) {
-  var tdElement = document.createElement('td');
-  tdElement.textContent = capitolHill.beansPerHour[i];
-  trElement.appendChild(tdElement);
-};
-beansTable.appendChild(trElement);
-//**************************************//
-var trElement = document.createElement('tr');
-var thElement = document.createElement('th');
-thElement.textContent = 'Seattle Public Library';
-trElement.appendChild(thElement);
-
-var tdElement = document.createElement('td');
-tdElement.textContent = seattlePublicLibrary.totalBeans;
-trElement.appendChild(tdElement);
-
-for (var i = 0; i < seattlePublicLibrary.beansPerHour.length; i++) {
-  var tdElement = document.createElement('td');
-  tdElement.textContent = seattlePublicLibrary.beansPerHour[i];
-  trElement.appendChild(tdElement);
-};
-beansTable.appendChild(trElement);
-
-//**************************************//
-var trElement = document.createElement('tr');
-var thElement = document.createElement('th');
-thElement.textContent = 'South Lake Union';
-trElement.appendChild(thElement);
-
-var tdElement = document.createElement('td');
-tdElement.textContent = southLakeUnion.totalBeans;
-trElement.appendChild(tdElement);
-
-for (var i = 0; i < southLakeUnion.beansPerHour.length; i++) {
-  var tdElement = document.createElement('td');
-  tdElement.textContent = southLakeUnion.beansPerHour[i];
-  trElement.appendChild(tdElement);
-};
-beansTable.appendChild(trElement);
-
-//***************************************//
-
-var trElement = document.createElement('tr');
-var thElement = document.createElement('th');
-thElement.textContent = 'Sea-Tac Airport';
-trElement.appendChild(thElement);
-
-var tdElement = document.createElement('td');
-tdElement.textContent = seaTacAirport.totalBeans;
-trElement.appendChild(tdElement);
-
-for (var i = 0; i < seaTacAirport.beansPerHour.length; i++) {
-  var tdElement = document.createElement('td');
-  tdElement.textContent = seaTacAirport.beansPerHour[i];
-  trElement.appendChild(tdElement);
-};
-beansTable.appendChild(trElement);
+  for (var i = 0; i < store.beansPerHour.length; i++) {
+    var tdElement = document.createElement('td');
+    tdElement.textContent = store.beansPerHour[i];
+    trElement.appendChild(tdElement);
+  };
+  beansTable.appendChild(trElement);
+}
+makeTableRow(pikePlace);
+makeTableRow(seaTacAirport);
+makeTableRow(seattlePublicLibrary);
+makeTableRow(southLakeUnion);
+makeTableRow(capitolHill);
 
 //*****************************************************//
 
-var locationName = document.getElementById('Location');
-var minCustomersHour = document.getElementById('Min');
-var maxCustomersHour = document.getElementById('Max');
-var avgCupsPerCustomer = document.getElementById('Avg Cups');
-var avgPoundsPerCustomer = document.getElementById('Avg Pounds');
-var allSubmisions = [];
+var headerform = document.getElementById('header-form');
+headerform.addEventListener('submit', handleSubmission);
+//elementName.addEventListener('event type', handlerFunction);
+function handleSubmission(event){
+  event.preventDefault();
 
-// var renderAllComments = function() {
-//   locationName.innerHTML = '';
-//   for (var i = 0; i < allComments.length; i++) {
-//     locationName.appendChild(allComments[i].render());
-//   };
-//make a function that builds the header row
-  //create a row element
+  var locationName = event.target.location.value;
+  var minCustomersHour = parseFloat(event.target.min.value);
+  var maxCustomersHour = parseFloat(event.target.max.value);
+  var avgCupsPerCustomer = parseFloat(event.target.avgcups.value);
+  var avgPoundsPerCustomer = parseFloat(event.target.avgpounds.value);
 
-  //create an emptyCell
-  //give the emptyCell blank textContent: ''
-  //append the emptyCell to the row
+  var newShop  = new CoffeeShop(locationName, minCustomersHour, maxCustomersHour, avgPoundsPerCustomer, avgPoundsPerCustomer);
 
-  //create a dailyTotal cell
-  //give the dailyTotal cell textContent
-  //append the dailyTotal cell to the row
+  newShop.calcCustomersPerHour();
+  newShop.calcCupsPerHour();
+  newShop.calcBeansNeededForCupsPerHour();
+  newShop.calcPoundPackagesPerHour();
+  newShop.calcBeansPerHour();
+  newShop.calcCustomerBuysPerHour();
 
-  //make a for loop
-    //create a cell
-    //give the cell text content from the hours array
-    //append the cell to the row
+  makeTableRow(newShop);
+  console.log(newShop);
 
-  //append the row to the table
+  event.target.location.value = null;
+  event.target.min.value = null;
+  event.target.max.value = null;
+  event.target.avgcups.value = null;
+  event.target.avgpounds.value = null;
 
-//make a function that builds the shop rows
-//create a row element
-
-//create a shopName cell
-//give the shopName cell textContent from a shop object [shopname].locationName
-//append the shopName to the row
-
-//create a dailyTotal cell
-//give the dailyTotal cell textContent from a shop object [shopname].dailyBeansNeeded
-//append the dailyTotal cell to the row
-
-//make a for loop
-  //create a cell
-  //give the cell text content from a shop object [shopname].beansPerHour[i]
-  //append the cell to the row
-
-//append the row to the table
+}
