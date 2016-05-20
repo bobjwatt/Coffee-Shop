@@ -132,7 +132,7 @@ thElement.textContent = '';
 trElement.appendChild(thElement);
 
 var thElement = document.createElement('th');
-thElement.textContent = 'Daily Location Total';
+thElement.textContent = 'Daily Total';
 trElement.appendChild(thElement);
 
 for (var i = 0; i < hours.length; i++) {
@@ -141,7 +141,27 @@ for (var i = 0; i < hours.length; i++) {
   trElement.appendChild(thElement);
 };
 beansTable.appendChild(trElement);
-//Log way to do it
+
+//****************************************//
+
+// var baristaHours = document.getElementById('baristas-table');
+//
+// var trElement = document.createElement('tr');
+// var thElement = document.createElement('th');
+// thElement.textContent = '';
+// trElement.appendChild(thElement);
+//
+// var thElement = document.createElement('th');
+// thElement.textContent = 'Daily Location Total';
+// trElement.appendChild(thElement);
+//
+// for (var i = 0; i < hours.length; i++) {
+//   var thElement = document.createElement('th');
+//   thElement.textContent = hours[i];
+//   trElement.appendChild(thElement);
+// };
+// baristaHours.appendChild(trElement);
+//Long way to do it
 // var trElement = document.createElement('tr');
 // var thElement = document.createElement('th');
 // thElement.textContent = 'Pike Place Market';
