@@ -26,8 +26,7 @@ CoffeeShop.prototype.calcCustomersPerHour = function() {
     this.customersPerHour.push(customers);
     this.dailyCustomersTotal += parseFloat(customers.toFixed(1));
   }
-  // console.log(this.customersPerHour);
-  // console.log(this.dailyCustomersTotal);
+
 };
 
 CoffeeShop.prototype.calcCustomerBuysPerHour = function (){
@@ -36,8 +35,7 @@ CoffeeShop.prototype.calcCustomerBuysPerHour = function (){
     this.employeesPerHour.push(employees);
     this.dailyEmployeesHoursTotal += parseFloat(this.employeesPerHour[i]);
   }
-  console.log(this.employeesPerHour);
-  console.log(this.dailyEmployeesHoursTotal);
+
 };
 
 CoffeeShop.prototype.calcCupsPerHour = function(){
@@ -46,36 +44,32 @@ CoffeeShop.prototype.calcCupsPerHour = function(){
     this.cupsPerHour.push(cups);
     this.dailyCupsTotal += parseFloat(cups.toFixed(1));
   }
-  console.log(this.dailyCupsTotal);
-  console.log(this.cupsPerHour);
+
 };
 CoffeeShop.prototype.calcBeansNeededForCupsPerHour = function(){
   for (var i = 0; i < this.cupsPerHour.length; i++) {
     var beansPerCup = parseFloat((this.cupsPerHour[i] / 16).toFixed(1));
-  // 1 lbs === 16 cups
+
     this.beansNeededForCupsPerHour.push(beansPerCup);
     this.dailyBeansNeeded += parseFloat(beansPerCup.toFixed(1));
   }
-  // console.log(this.dailyBeansNeeded);
-  // console.log(this.beansNeededForCupsPerHour);
+
 };
 CoffeeShop.prototype.calcPoundPackagesPerHour = function(){
   for (var i = 0; i < hours.length; i++) {
     var packages = parseFloat((this.avgPoundsPerCustomer * this.customersPerHour[i]).toFixed(1));
-  // 1 lbs === 16 cups
+
     this.poundPackagesPerHour.push(packages);
     this.dailyPoundPackagesTotal += packages;
 
   }
-  // console.log(this.packages);
-  // console.log(this.poundPackagesPerHour);
+
 };
 CoffeeShop.prototype.calcBeansPerHour = function(){
   var totalBeans = 0;
   for (var i = 0; i < hours.length; i++) {
     var beansPerHour = parseFloat((this.beansNeededForCupsPerHour[i] + this.poundPackagesPerHour[i]).toFixed(1));
-  // 1 lbs === 16 cups
-    // console.log (beansPerHour);
+
     this.beansPerHour.push(beansPerHour);
     totalBeans += beansPerHour;
   }
@@ -121,8 +115,6 @@ seaTacAirport.calcBeansNeededForCupsPerHour();
 seaTacAirport.calcPoundPackagesPerHour();
 seaTacAirport.calcBeansPerHour();
 seaTacAirport.calcCustomerBuysPerHour();
-
-//get ref to table element
 
 var beansTable = document.getElementById('beans-table');
 
@@ -274,7 +266,7 @@ makeTableRow(capitolHill);
 
 var headerform = document.getElementById('header-form');
 headerform.addEventListener('submit', handleSubmission);
-//elementName.addEventListener('event type', handlerFunction);
+
 function handleSubmission(event){
   event.preventDefault();
 
@@ -301,5 +293,4 @@ function handleSubmission(event){
   event.target.max.value = null;
   event.target.avgcups.value = null;
   event.target.avgpounds.value = null;
-
 }
