@@ -4,9 +4,8 @@ body {
   border: 1px solid green;
   -moz-border-radius: 20px; -webkit-border-radius: 20px;
   width: 1200px;
-
-
 }
+
 h1{
   background-color: tan;
   color: green;
@@ -14,11 +13,11 @@ h1{
   text-align: center;
 }
 
-th {
+th{
   border: 1px solid green;
   text-align: center;
-
 }
+
 td{
   border: 1px solid green;
   text-align: center;
@@ -30,16 +29,14 @@ tr{
 }
 
 .pics {
-border: 1px solid black;
-display: inline-block;
-margin-left: 12%;
-
+  border: 1px solid black;
+  display: inline-block;
+  margin-left: 12%;
 }
 
 img.fire{
-
-height: 200px;
-width: 280px;
+  height: 200px;
+  width: 280px;
 }
 
 button {
@@ -65,8 +62,12 @@ fieldset {
   color: blue
   text-align:center;
 }
-legend { color:green;
+
+legend {
+  color:green;
+
 }
+
 p {
   font-size: 12px;
 }
